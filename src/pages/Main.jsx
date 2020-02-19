@@ -14,3 +14,11 @@ const Main =()=>{
     )
 }
 export default Main;
+
+const Index = () => {
+    return (
+        <div>
+            Hello World
+        </div>
+    )
+}

@@ -87,13 +87,16 @@ function Registered(props) {
             header:{'Access-Control-Allow-Origin': '*'}
         }).then(
             res=>{
-                timeOut()
+                console.log(res.data.isScuccess)
                 if(res.data.data=='注册成功'){
                     message.success('恭喜您，注册成功(〃\'▽\'〃)')
-                    timeOut()
                     props.history.push('/index/')
+                    console.log('注册成功，跳转ing...')
+                    timeOut()
                 }
             }
+        ).catch(
+            err=>console.log(err)
         )
     }
     return (
